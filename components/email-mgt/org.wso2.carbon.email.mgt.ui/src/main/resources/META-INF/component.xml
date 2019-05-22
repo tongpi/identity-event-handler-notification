@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~
   ~ Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
@@ -23,23 +24,23 @@
     <ManagementPermissions>
         <!--Email Management Permissions-->
         <ManagementPermission>
-            <DisplayName>Email Management</DisplayName>
+            <DisplayName>Email 管理</DisplayName>
             <ResourceId>/permission/admin/manage/identity/emailmgt/</ResourceId>
         </ManagementPermission>
         <ManagementPermission>
-            <DisplayName>Create</DisplayName>
+            <DisplayName>创建</DisplayName>
             <ResourceId>/permission/admin/manage/identity/emailmgt/create</ResourceId>
         </ManagementPermission>
         <ManagementPermission>
-            <DisplayName>View</DisplayName>
+            <DisplayName>查看</DisplayName>
             <ResourceId>/permission/admin/manage/identity/emailmgt/view</ResourceId>
         </ManagementPermission>
         <ManagementPermission>
-            <DisplayName>Update</DisplayName>
+            <DisplayName>更新</DisplayName>
             <ResourceId>/permission/admin/manage/identity/emailmgt/update</ResourceId>
         </ManagementPermission>
         <ManagementPermission>
-            <DisplayName>Delete</DisplayName>
+            <DisplayName>删除</DisplayName>
             <ResourceId>/permission/admin/manage/identity/emailmgt/delete</ResourceId>
         </ManagementPermission>
 

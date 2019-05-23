@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 ~ Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
 ~
 ~ WSO2 Inc. licenses this file to you under the Apache License,
@@ -180,7 +180,7 @@
                             }
                         });
                     }
-                    var msg = "???? {0}:{1} email ??. ???????";
+                    var msg = "将要删除 {0}:{1} email 模板. 要继续处理吗?";
                     msg = msg.replace("{0}", templateName).replace("{1}", locale);
                     CARBON.showConfirmationDialog(msg, deleteFunc, null, null);
                 }
@@ -204,7 +204,7 @@
                             }
                         });
                     }
-                    var msg = "??????{0}????email??. ???????";
+                    var msg = "将会删除类别{0}下的所有email模板. 要继续处理吗";
                     CARBON.showConfirmationDialog(msg.replace("{0}", templateName), deleteFunc, null);
                 }
 
@@ -338,10 +338,10 @@
                     </table>
                 </div>
                 <div class="buttonRow">
-                    <input type="button" class="button" value="??" onclick="validate()"/>
-                    <input type="button" class="button" style="margin-left: 10px;" value="????"
+                    <input type="button" class="button" value="保存" onclick="validate()"/>
+                    <input type="button" class="button" style="margin-left: 10px;" value="删除模板"
                            onclick="deleteTemplate()"/>
-                    <input type="button" class="button" style="margin-left: 10px;" value="??????"
+                    <input type="button" class="button" style="margin-left: 10px;" value="删除模板类别"
                            onclick="deleteTemplateType()"/>
                 </div>
             </form>

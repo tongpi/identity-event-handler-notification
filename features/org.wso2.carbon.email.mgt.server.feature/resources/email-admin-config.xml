@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
  ~ Copyright (c) 2016, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
  ~
@@ -23,31 +24,26 @@
 
 <configurations>
     <configuration type="passwordReset" display="PasswordReset" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Password Reset</subject>
+        <subject>身份管理 - 密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Password Reset
+                            密码重置
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            We received a request to reset the password for the <b>{{user-name}}</b> account that is associated with this email address.<br>
-                            If you made this request, please click the button below to securely reset your password.
+                            我们收到重置与此电子邮件地址关联的账号 <b>{{user-name}}</b> 的密码的请求.<br>
+                            如果确实是您提出此请求，请单击下面的按钮以安全地重置密码。
                         </p>
                     </td>
                 </tr>
@@ -57,7 +53,7 @@
                             <tr>
                                 <td style="border-radius: 6px;  padding: 14px 0px;">
                                     <a href="{{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}&amp;callback={{callback}}"
-                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block; cursor: pointer;">Reset Password</a>
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block; cursor: pointer;">重置密码</a>
                                 </td>
                             </tr>
                         </table>
@@ -66,31 +62,21 @@
                 <tr>
                     <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            如果单击该按钮似乎不起作用，可以将以下链接复制并粘贴到浏览器地址栏中. <br/>
                             <a style="word-break: break-all; color: #ff5000;font-size: 14px;" target="_blank"
                                href="{{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}&amp;callback={{callback}}">
                                 {{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}&amp;callback={{callback}}</a>
                         </p>
                         <br>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            If you did not request to have your {{user-name}} password reset, disregard this email and no changes to your account will be made.
+                            如果您没有请求重置用户名 {{user-name}}的密码，请忽略此电子邮件，并且不会对您的账号进行任何更改。
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            感谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -101,32 +87,27 @@
         <footer>---</footer>
     </configuration>
     <configuration type="emailConfirm" display="EmailConfirm" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Email Confirmation</subject>
+        <subject>身份管理 - Email 确认</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Email Confirmation
+                            Email 确认
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            You have created an account with the following user name. <br>
-                            User Name: <b>{{user-name}}</b><br>
-                            Please click the button below to confirm your account.
+                            您已经创建了一个具有以下用户名的账号. <br>
+                            用户名: <b>{{user-name}}</b><br>
+                            请单击下面的按钮确认您的账号.
                         </p>
                     </td>
                 </tr>
@@ -136,7 +117,7 @@
                             <tr>
                                 <td style="border-radius: 6px;  padding: 14px 0px;">
                                     <a href="{{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}"
-                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">Confirm Account</a>
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">确认账户</a>
                                 </td>
                             </tr>
                         </table>
@@ -145,7 +126,7 @@
                 <tr>
                     <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            如果单击该按钮似乎不起作用，可以将以下链接复制并粘贴到浏览器地址栏中. <br/>
                             <a style="word-break: break-all; color: #ff5000; font-size: 14px" target="_blank"
                                href="{{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}">
                                 {{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}</a>
@@ -155,17 +136,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -176,48 +147,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="accountIdRecovery" display="AccountIdRecovery" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Account Recovery</subject>
+        <subject>身份管理 - 账号恢复</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Recovery
+                            账号恢复
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            We received a request to recover your account user name. The account associated with us indicates that
-                            your user name is <b>{{userstore-domain}}/{{user-name}}@{{tenant-domain}}</b>.
+                            我们收到恢复您账号用户名的请求。与我们关联的账户指示您的用户名是 <b>{{userstore-domain}}/{{user-name}}@{{tenant-domain}}</b>.
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -228,32 +183,27 @@
         <footer>---</footer>
     </configuration>
     <configuration type="accountConfirmation" display="AccountConfirmation" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Account Confirmation</subject>
+        <subject>身份管理 - 账号确认</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Confirmation
+                            账号确认
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            You have created an account with the following user name. <br>
-                            User Name: <b>{{user-name}}</b><br>
-                            Please click the button below to confirm your account.
+                            您已经创建了一个具有以下用户名的账号. <br>
+                            用户名: <b>{{user-name}}</b><br>
+                            请单击下面的按钮确认您的账号.
                         </p>
                     </td>
                 </tr>
@@ -263,7 +213,7 @@
                             <tr>
                                 <td style="border-radius: 6px;  padding: 14px 0px;">
                                     <a href="{{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}&amp;callback={{callback}}"
-                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">Confirm Account</a>
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">账号确认</a>
                                 </td>
                             </tr>
                         </table>
@@ -272,7 +222,7 @@
                 <tr>
                     <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            如果单击该按钮似乎不起作用，可以将以下链接复制并粘贴到浏览器地址栏中. <br/>
                             <a style="word-break: break-all; color: #ff5000; font-size: 14px" target="_blank"
                                href="{{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}&amp;callback={{callback}}">
                                 {{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}&amp;callback={{callback}}
@@ -283,17 +233,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -304,32 +244,27 @@
         <footer>---</footer>
     </configuration>
     <configuration type="resendAccountConfirmation" display="ResendAccountConfirmation" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Resend Account Confirmation</subject>
+        <subject>身份管理 - 重新发送账户确认</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Resend Account Confirmation
+                            重新发送账户确认
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            You have created an account with the following user name. <br>
-                            User Name: <b>{{user-name}}</b><br>
-                            Please click the below button to confirm your account.
+                            您已经创建了一个具有以下用户名的账号. <br>
+                            用户名: <b>{{user-name}}</b><br>
+                            请单击下面的按钮确认您的账号.
                         </p>
                     </td>
                 </tr>
@@ -339,7 +274,7 @@
                             <tr>
                                 <td style="border-radius: 6px;  padding: 14px 0px;">
                                     <a href="{{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}"
-                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">Confirm Registration</a>
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">确认注册</a>
                                 </td>
                             </tr>
                         </table>
@@ -348,7 +283,7 @@
                 <tr>
                     <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            如果单击该按钮似乎不起作用，可以将以下链接复制并粘贴到浏览器地址栏中. <br/>
                             <a style="word-break: break-all; color: #ff5000; font-size: 14px" target="_blank"
                                href="{{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}">
                                 {{carbon.product-url}}/accountrecoveryendpoint/confirmregistration.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}
@@ -359,17 +294,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -380,49 +305,34 @@
         <footer>---</footer>
     </configuration>
     <configuration type="temporaryPassword" display="TemporaryPassword" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Temporary Password</subject>
+        <subject>身份管理 - 临时密码</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Temporary Password
+                            临时密码
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please find your temporary password below.<br>
-                            User Name: <b>{{user-name}}</b><br>
-                            Temporary Password: <b>{{temporary-password}}</b>
+                            请在下面找到您的临时密码.<br>
+                            用户名: <b>{{user-name}}</b><br>
+                            临时密码: <b>{{temporary-password}}</b>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -433,47 +343,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="otp" display="OneTimePassword" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - One Time Password Reset</subject>
+        <subject>身份管理 - 一次性密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            One Time Password Reset
+                            一次性密码重置
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please use the password <b>{{otp-password}}</b> as the new password for your next login.
+                            请用密码： <b>{{otp-password}}</b> 作为您下次登录的新密码.
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -484,31 +379,26 @@
         <footer>---</footer>
     </configuration>
     <configuration type="askPassword" display="AskPassword" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Create Password for New Account</subject>
+        <subject>身份管理 - 为新账号创建密码</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Password Change for New Account
+                            为新账号创建密码
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user-name}},
+                            您好 {{user-name}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please create your password for the newly created account <b>{{user-name}}</b>. <br>
-                            Please click the button below to create the password.
+                            为新创建的账号 <b>{{user-name}}</b>创建密码. <br>
+                            请单击下面的按钮创建密码.
                         </p>
                     </td>
                 </tr>
@@ -518,7 +408,7 @@
                             <tr>
                                 <td style="border-radius: 6px;  padding: 14px 0px;">
                                     <a href="{{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}"
-                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">Create Password</a>
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">创建密码</a>
                                 </td>
                             </tr>
                         </table>
@@ -527,7 +417,7 @@
                 <tr>
                     <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            如果单击该按钮似乎不起作用，可以将以下链接复制并粘贴到浏览器地址栏中. <br/>
                             <a style="word-break: break-all; color: #ff5000; font-size: 14px" target="_blank"
                                href="{{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}">
                                 {{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}
@@ -538,17 +428,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -559,30 +439,25 @@
         <footer>---</footer>
     </configuration>
     <configuration type="adminforcedpasswordreset" display="AdminForcedPasswordReset" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Admin Forced Password Reset</subject>
+        <subject>身份管理 - 管理员强制密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Admin Forced Password Reset
+                            管理员强制密码重置
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please click the button below to reset your password for the account <b>{{user-name}}</b>.
+                            请单击下面的按钮重置您的账号 <b>{{user-name}}</b>的密码.
                         </p>
                     </td>
                 </tr>
@@ -592,7 +467,7 @@
                             <tr>
                                 <td style="border-radius: 6px;  padding: 14px 0px;">
                                     <a href="{{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}"
-                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">Reset Password</a>
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">重置密码</a>
                                 </td>
                             </tr>
                         </table>
@@ -601,7 +476,7 @@
                 <tr>
                     <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            如果单击该按钮似乎不起作用，可以将以下链接复制并粘贴到浏览器地址栏中. <br/>
                             <a style="word-break: break-all; color: #ff5000; font-size: 14px" target="_blank"
                                href="{{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}">
                                 {{carbon.product-url}}/accountrecoveryendpoint/confirmrecovery.do?confirmation={{confirmation-code}}&amp;userstoredomain={{userstore-domain}}&amp;username={{url:user-name}}&amp;tenantdomain={{tenant-domain}}
@@ -612,17 +487,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -633,31 +498,26 @@
         <footer>---</footer>
     </configuration>
     <configuration type="adminforcedpasswordresetwithotp" display="AdminForcedPasswordResetWithOTP" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Admin Forced Password Reset</subject>
+        <subject>身份管理 - 管理员强制密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Admin Forced Password Reset
+                            管理员强制密码重置
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            We received a request to reset the password for the <b>{{user-name}}</b> account that is associated with this email address.<br>
-                            Please use below OTP as the password at next login and then reset your password.<br>
+                            我们收到重置与此电子邮件地址关联的账号<b>{{user-name}}</b>的密码的请求.<br>
+                            在下次登录时使用下面的OTP作为密码，然后重新设置密码.<br>
                             OTP : <b>{{confirmation-code}}</b>
                         </p>
                     </td>
@@ -665,17 +525,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -686,47 +536,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="accountUnLock" display="AccountUnLock" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Your Account has been Unlocked</subject>
+        <subject>身份管理 - 账户已解锁</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Unlocked
+                            账户已解锁
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please note that the account registered with the user name <b>{{user-name}}</b> has been unlocked.<br>
+                            请注意，用用户名 <b>{{user-name}}</b>注册的账号已解锁.<br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -737,47 +572,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="accountLock" display="AccountLock" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Your Account has been Locked</subject>
+        <subject>身份管理 - 账户被锁定</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Locked
+                            账户被锁定
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please note that the account registered with the user name <b>{{user-name}}</b> has been locked.<br>
+                            请注意，用用户名<b>{{user-name}}</b>注册的账号已被锁定.<br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -788,47 +608,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="accountEnable" display="AccountEnable" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Your Account has been Enabled</subject>
+        <subject>身份管理 - 您的账户已被启用</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Enabled
+                            账户启用
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please note that the account registered with the user name <b>{{user-name}}</b> has been enabled.<br>
+                            请注意，用用户名<b>{{user-name}}</b>注册的账号已被启用.<br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -839,47 +644,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="accountDisable" display="AccountDisable" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Your Account has been Disabled</subject>
+        <subject>身份管理 - 您的账户已被禁用</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Disabled
+                            账户已被禁用
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please note that the account registered with the user name <b>{{user-name}}</b> has been disabled.<br>
+                            请注意，用用户名<b>{{user-name}}</b>注册的账号已被禁用.<br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -890,47 +680,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="passwordResetSucess" display="passwordResetSucess" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Password Reset Successful</subject>
+        <subject>身份管理 - 密码重置成功</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Password Reset Successful
+                            密码重置成功
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user-name}},
+                            您好 {{user-name}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Please note that your password has been successfully reset for the account <b>{{user-name}}</b>. <br>
+                            请注意，用户名<b>{{user-name}}</b>的密码已成功重置. <br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -941,7 +716,7 @@
         <footer>---</footer>
     </configuration>
     <configuration type="initiateRecovery" display="initiateRecovery" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Password Reset Initiated</subject>
+        <subject>身份管理 - 密码重置为初始密码</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
@@ -954,34 +729,24 @@
                 <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Password Reset Initiated
+                            密码重置为初始密码
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            This is to notify that you have initiated to reset your password using security questions.<br>
+                            这是为了通知您已开始使用安全问题重置密码.<br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -992,47 +757,32 @@
         <footer>---</footer>
     </configuration>
     <configuration type="idleAccountReminder" display="idleAccountReminder" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Account Inactive</subject>
+        <subject>身份管理 - 账号不活跃</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Account Inactive
+                            账号不活跃
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            It looks as though you haven't signed in to your account for quite a while. Please sign in to your account if you'd like to keep your account active.<br>
+                            似乎您已经很久没有登录您的账号了。如果您想保持账号处于活动状态，请登录您的账号.<br>
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>
@@ -1043,30 +793,25 @@
         <footer>---</footer>
     </configuration>
     <configuration type="UnseenDeviceLogin" display="UnseenDeviceLogin" locale="en_US" emailContentType="text/html">
-        <subject>WSO2 - Login from a New Device</subject>
+        <subject>身份管理 - 从新设备登录</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
             <td style="padding: 30px 30px 20px 30px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
                 <tr>
-                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
-                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0"/></a>
-                    </td>
-                </tr>
-                <tr>
                     <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
                         <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
-                            Login from a New Device
+                            从新设备登录
                         </h1>
                     </td>
                 </tr>
                 <tr>
                     <td style="text-align: left; padding: 0px 50px;" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            Hi {{user.claim.givenname}},
+                            您好 {{user.claim.givenname}},
                         </p>
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
-                            We detected a login to your account({{username}}) from a new device on {{login-time}}.<br>
+                            我们检测到有人在 {{login-time}}从一个新设备登录到了您的账号({{username}}).<br>
                             If it is not you, contact the administrator immediately.
                         </p>
                     </td>
@@ -1074,17 +819,7 @@
                 <tr>
                     <td style="text-align: left; padding: 30px 50px 50px 50px" valign="top">
                         <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
-                            Thanks,<br/>WSO2 Identity Server Team
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
-                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
-                            &copy; 2018
-                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
-                            <br>
-                            787 Castro Street, Mountain View, CA 94041.
+                            谢谢,<br/>信息中心安全管理团队
                         </p>
                     </td>
                 </tr>

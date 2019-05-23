@@ -31,7 +31,7 @@
         function addTemplateType() {
             var typeDisplayName = document.getElementsByName("templateDisplayName")[0].value;
             if (typeDisplayName == null || typeDisplayName == "") {
-                CARBON.showWarningDialog('Please enter a valid security question', null, null);
+                CARBON.showWarningDialog('请指定一个有效的安全问题', null, null);
                 location.href = '#';
             } else if (typeDisplayName.length > 50) {
                 CARBON.showWarningDialog('<fmt:message key="email.template.type.is.too.long"/>');
@@ -39,7 +39,7 @@
             }
 
             else {
-                if (!doValidateInput(document.getElementById("templateDisplayName"), "Email Template Type Name is invalid. Only {1} allowed.")) {
+                if (!doValidateInput(document.getElementById("templateDisplayName"), "Email 模板类别名称无效. 只有 {1} 被允许.")) {
                     location.href = '#';
                 } else {
                     $("#templateTypeForm").submit();
@@ -83,8 +83,8 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" class="buttonRow">
-                                        <button onclick="addTemplateType()" type="button" class="button">Add</button>
-                                        <button onclick="cancelForm()" type="button" class="button">Cancel</button>
+                                        <button onclick="addTemplateType()" type="button" class="button">添加</button>
+                                        <button onclick="cancelForm()" type="button" class="button">取消</button>
                                     </td>
                                 </tr>
                             </table>
@@ -95,4 +95,3 @@
         </form>
     </div>
 </fmt:bundle>
-

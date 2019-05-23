@@ -15,6 +15,7 @@
 ~ specific language governing permissions and limitations
 ~ under the License.
 -->
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://wso2.org/projects/carbon/taglibs/carbontags.jar" prefix="carbon" %>
 <%@page import="org.apache.axis2.context.ConfigurationContext" %>
@@ -179,7 +180,7 @@
                             }
                         });
                     }
-                    var msg = "This will delete {0}:{1} email template. Are you sure you want to continue?";
+                    var msg = "???? {0}:{1} email ??. ???????";
                     msg = msg.replace("{0}", templateName).replace("{1}", locale);
                     CARBON.showConfirmationDialog(msg, deleteFunc, null, null);
                 }
@@ -203,7 +204,7 @@
                             }
                         });
                     }
-                    var msg = "This will delete all email templates of type {0}. Are you sure you want to continue?";
+                    var msg = "??????{0}????email??. ???????";
                     CARBON.showConfirmationDialog(msg.replace("{0}", templateName), deleteFunc, null);
                 }
 
@@ -337,10 +338,10 @@
                     </table>
                 </div>
                 <div class="buttonRow">
-                    <input type="button" class="button" value="Save" onclick="validate()"/>
-                    <input type="button" class="button" style="margin-left: 10px;" value="Delete Template"
+                    <input type="button" class="button" value="??" onclick="validate()"/>
+                    <input type="button" class="button" style="margin-left: 10px;" value="????"
                            onclick="deleteTemplate()"/>
-                    <input type="button" class="button" style="margin-left: 10px;" value="Delete Template Type"
+                    <input type="button" class="button" style="margin-left: 10px;" value="??????"
                            onclick="deleteTemplateType()"/>
                 </div>
             </form>

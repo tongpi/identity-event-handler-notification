@@ -15,6 +15,7 @@
 ~ specific language governing permissions and limitations
 ~ under the License.
 -->
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://wso2.org/projects/carbon/taglibs/carbontags.jar" prefix="carbon" %>
 <%@page import="org.apache.axis2.context.ConfigurationContext" %>
@@ -228,8 +229,8 @@
                     </tr>
                     <tr>
                         <td colspan="2" class="buttonRow">
-                            <button onclick="validate()" type="button" class="button">Add</button>
-                            <button onclick="cancelForm()" type="button" class="button">Cancel</button>
+                            <button onclick="validate()" type="button" class="button">添加</button>
+                            <button onclick="cancelForm()" type="button" class="button">取消</button>
                         </td>
                     </tr>
 

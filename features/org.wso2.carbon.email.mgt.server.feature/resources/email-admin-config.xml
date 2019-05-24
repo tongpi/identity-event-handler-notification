@@ -23,7 +23,7 @@
   -->
 
 <configurations>
-    <configuration type="passwordReset" display="PasswordReset" locale="en_US" emailContentType="text/html">
+    <configuration type="passwordReset" display="密码重置" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -86,7 +86,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="emailConfirm" display="EmailConfirm" locale="en_US" emailContentType="text/html">
+    <configuration type="emailConfirm" display="Email 确认" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - Email 确认</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -146,7 +146,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountIdRecovery" display="AccountIdRecovery" locale="en_US" emailContentType="text/html">
+    <configuration type="accountIdRecovery" display="账号恢复" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 账号恢复</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -182,7 +182,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountConfirmation" display="AccountConfirmation" locale="en_US" emailContentType="text/html">
+    <configuration type="accountConfirmation" display="账号确认" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 账号确认</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -243,7 +243,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="resendAccountConfirmation" display="ResendAccountConfirmation" locale="en_US" emailContentType="text/html">
+    <configuration type="resendAccountConfirmation" display="重新发送账户确认" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 重新发送账户确认</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -304,7 +304,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="temporaryPassword" display="TemporaryPassword" locale="en_US" emailContentType="text/html">
+    <configuration type="temporaryPassword" display="临时密码" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 临时密码</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -342,7 +342,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="otp" display="OneTimePassword" locale="en_US" emailContentType="text/html">
+    <configuration type="otp" display="一次性密码重置" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 一次性密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -378,7 +378,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="askPassword" display="AskPassword" locale="en_US" emailContentType="text/html">
+    <configuration type="askPassword" display="为新账号创建密码" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 为新账号创建密码</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -438,7 +438,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="adminforcedpasswordreset" display="AdminForcedPasswordReset" locale="en_US" emailContentType="text/html">
+    <configuration type="adminforcedpasswordreset" display="管理员强制密码重置" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 管理员强制密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -497,7 +497,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="adminforcedpasswordresetwithotp" display="AdminForcedPasswordResetWithOTP" locale="en_US" emailContentType="text/html">
+    <configuration type="adminforcedpasswordresetwithotp" display="管理员强制密码重置OTP" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 管理员强制密码重置</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -535,7 +535,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountUnLock" display="AccountUnLock" locale="en_US" emailContentType="text/html">
+    <configuration type="accountUnLock" display="账户已解锁" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 账户已解锁</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -571,7 +571,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountLock" display="AccountLock" locale="en_US" emailContentType="text/html">
+    <configuration type="accountLock" display="账户被锁定" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 账户被锁定</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -607,7 +607,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountEnable" display="AccountEnable" locale="en_US" emailContentType="text/html">
+    <configuration type="accountEnable" display="您的账户已被启用" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 您的账户已被启用</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -643,7 +643,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="accountDisable" display="AccountDisable" locale="en_US" emailContentType="text/html">
+    <configuration type="accountDisable" display="您的账户已被禁用" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 您的账户已被禁用</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -679,7 +679,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="passwordResetSucess" display="passwordResetSucess" locale="en_US" emailContentType="text/html">
+    <configuration type="passwordResetSucess" display="密码重置成功" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 密码重置成功</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -715,7 +715,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="initiateRecovery" display="initiateRecovery" locale="en_US" emailContentType="text/html">
+    <configuration type="initiateRecovery" display="密码重置为初始密码" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 密码重置为初始密码</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -756,7 +756,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="idleAccountReminder" display="idleAccountReminder" locale="en_US" emailContentType="text/html">
+    <configuration type="idleAccountReminder" display="账号不活跃" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 账号不活跃</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
@@ -792,7 +792,7 @@
         </table>]]></body>
         <footer>---</footer>
     </configuration>
-    <configuration type="UnseenDeviceLogin" display="UnseenDeviceLogin" locale="en_US" emailContentType="text/html">
+    <configuration type="UnseenDeviceLogin" display="从新设备登录" locale="zh_CN" emailContentType="text/html">
         <subject>身份管理 - 从新设备登录</subject>
         <body><![CDATA[<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
             <tr>
